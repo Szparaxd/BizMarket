@@ -1,0 +1,11 @@
+<div>
+    <h3 class="ms-3"><strong>Branża</strong></h3>
+    <ul class="list-group list-group-flush">
+        @for (branch of branches; track branch.name) {
+        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            {{ branch.name }}
+            <span class="badge text-bg-primary rounded-pill">{{ branch.count }}</span>
+        </a>
+        }
+    </ul>
+</div>

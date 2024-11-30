@@ -1,0 +1,216 @@
+<div class="container-sm mt-5">
+    <div class="row">
+        @for (step of steps; track step.title; let i = $index) {
+        <div class="col" (click)="goToStep(i)">
+            <div [class.active]="currentStep === i" class="step bg-body-secondary p-3">
+                <h5>{{ step.title }}</h5>
+                <div class="bg-primary" style="height: 15px;"></div>
+            </div>
+        </div>
+        }
+    </div>
+
+    <!-- Content -->
+    @if (currentStep === 0) {
+    <div class="row">
+        <div class="col">
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Tytuł ogłoszenia</h5>
+                <p>Napisz konkretnie co jset przedmiotem Twojej oferty.</p>
+                <input type="text" class="form-control" placeholder="Napisz...">
+            </div>
+
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Branża</h5>
+                <input type="text" class="form-control" placeholder="Napisz...">
+            </div>
+
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Rodzaj oferty</h5>
+                <input type="text" class="form-control" placeholder="Napisz...">
+            </div>
+
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Opis ogłoszenia</h5>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Tytuł ogłoszenia</h5>
+                <p>Opis widoczny w karcie wyszukiwania na wizytówce ogłoszenia.</p>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    }
+
+    @if (currentStep === 1) {
+    <div class="row">
+        <div class="col">
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Dodaj zdjęcia</h5>
+                <p class="text-center fs-1"><i class="bi bi-images"></i></p>
+                <p class="text-center fs-3">Przenieś i upuść zdjecia lub wybierz</p>
+                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus mollitia cum
+                    minima libero repudiandae architecto </p>
+            </div>
+
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Dodaj Link wideo</h5>
+                <input type="text" class="form-control" placeholder="Napisz...">
+            </div>
+        </div>
+    </div>
+    }
+
+    @if (currentStep === 2) {
+    <div class="row">
+        <div class="col">
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Cena</h5>
+                <input type="text" class="form-control" placeholder="Napisz...">
+                <div class="form-check form-control-lg form-switch mt-2">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Cena podlega negocjacji</label>
+                </div>
+
+            </div>
+
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Lokalizacja</h5>
+                <input type="text" class="form-control" placeholder="Napisz...">
+            </div>
+
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Dane kontaktowe</h5>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Imię">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Numer telefonu">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
+    @if (currentStep === 3) {
+    <div class="row">
+        <div class="col">
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Długość emisji ogłoszenia</h5>
+                <div class="row row-gap-3">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary w-100"><i class="bi bi-images"></i> Wyświetlaj
+                            przez 10 dni</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary w-100"><i class="bi bi-images"></i>Wyświetlaj
+                            przez 20 dni</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary w-100"><i class="bi bi-images"></i>Wyświetlaj
+                            przez 30 dni</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary w-100"><i class="bi bi-images"></i>Wyświetlaj
+                            przez 40 dni</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-body-secondary p-3 mt-1">
+                <h5>Opcje płatne</h5>
+                <div class="d-flex justify-content-between mb-2">
+                    <img class="img-thumbnail" style="height: 150px;"
+                        src="https://www.thebeekmantowerny.com/wp-content/uploads/2016/12/200x200.png">
+                    <div class="d-flex flex-column flex-grow-1">
+                        <span><strong>Przypięcia ogłoszenia na górze strony</strong></span>
+                        <span>Przypięcia ogłoszenia na górze strony</span>
+                        <span><strong>Przypięcia ogłoszenia na górze strony</strong></span>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <button type="button" class="btn btn-primary">Brak</button>
+                        <button type="button" class="btn btn-secondary">7dni 25,00zł</button>
+                        <button type="button" class="btn btn-secondary">15dni 45,00zł</button>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <img class="img-thumbnail" style="height: 150px;"
+                        src="https://www.thebeekmantowerny.com/wp-content/uploads/2016/12/200x200.png">
+                    <div class="d-flex flex-column flex-grow-1">
+                        <span><strong>Przypięcia ogłoszenia na górze strony</strong></span>
+                        <span>Przypięcia ogłoszenia na górze strony</span>
+                        <span><strong>Przypięcia ogłoszenia na górze strony</strong></span>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <button type="button" class="btn btn-primary">Brak</button>
+                        <button type="button" class="btn btn-secondary">7dni 25,00zł</button>
+                        <button type="button" class="btn btn-secondary">15dni 45,00zł</button>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <img class="img-thumbnail" style="height: 150px;"
+                        src="https://www.thebeekmantowerny.com/wp-content/uploads/2016/12/200x200.png">
+                    <div class="d-flex flex-column flex-grow-1">
+                        <span><strong>Przypięcia ogłoszenia na górze strony</strong></span>
+                        <span>Przypięcia ogłoszenia na górze strony</span>
+                        <span><strong>Przypięcia ogłoszenia na górze strony</strong></span>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <button type="button" class="btn btn-primary">Brak</button>
+                        <button type="button" class="btn btn-secondary">7dni 25,00zł</button>
+                        <button type="button" class="btn btn-secondary">15dni 45,00zł</button>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <img class="img-thumbnail" style="height: 150px;"
+                        src="https://www.thebeekmantowerny.com/wp-content/uploads/2016/12/200x200.png">
+                    <div class="d-flex flex-column flex-grow-1">
+                        <span><strong>Przypięcia ogłoszenia na górze strony</strong></span>
+                        <span>Przypięcia ogłoszenia na górze strony</span>
+                        <span><strong>Przypięcia ogłoszenia na górze strony</strong></span>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <button type="button" class="btn btn-primary">Brak</button>
+                        <button type="button" class="btn btn-secondary">7dni 25,00zł</button>
+                        <button type="button" class="btn btn-secondary">15dni 45,00zł</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-between mt-3">
+                <div>
+                    <h5>Twoje punkty: 123.00</h5>
+                    <h5>Zapłać punktami: -10.00</h5>
+                </div>
+                <h4>Do zapłaty 10,00zł</h4>
+            </div>
+        </div>
+
+
+    </div>
+    }
+
+    <div class="row mt-3">
+        <div class="col d-flex justify-content-around">
+            <button class="btn btn-secondary" [disabled]="currentStep === 0" (click)="prevStep()">Poprzedni</button>
+            @if (currentStep != 3) {
+            <button class="btn btn-secondary" [disabled]="currentStep === steps.length - 1"
+                (click)="nextStep()">Następny</button>
+            }
+            @else {
+            <div class="d-flex flex-column">
+                <button class="btn btn-primary"
+                    (click)="nextStep()">Zapłać</button>
+                <button class="btn btn-secondary"
+                    (click)="nextStep()">Zapłać punktami</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
